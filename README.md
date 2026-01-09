@@ -1,111 +1,167 @@
-# Restaurant-Management-System
-Restaurant Management System
+🍽️ Restaurant Management System (C)
 
-A simple console-based Restaurant Management System written in C. This system provides a basic framework to manage menu items, tables, orders, and generate bills. Currently, some features are placeholders for future development.
+A console-based Restaurant Management System developed in C as part of the Final Milestone – Programming Fundamentals project.
+The system integrates multiple modules into a single master application with file handling, sorting, and a clean UI.
 
-Table of Contents
+📌 Features
 
-Features
+✔ Unified Master Menu
+✔ Menu Management (Add, View, Sort)
+✔ Table Management
+✔ Order Management
+✔ Bill Generation
+✔ File Handling (Persistent Storage)
+✔ Bubble Sort Implementation
+✔ Clean & Colored Console UI
+✔ Modular & Structured Code
 
-Installation
+🧩 Modules Overview
+1️⃣ Menu Management
 
-Usage
+Add new menu items
 
-Planned Features
+Display all items in tabular format
 
-Contributing
+Sort items:
 
-License
+By ID (Ascending / Descending)
 
-Features
+By Name (Alphabetical A–Z)
 
-Color-coded console interface using ANSI escape codes
+2️⃣ Table Management
 
-Main Menu options:
+Add tables with seating capacity
 
-Manage Menu Items
+Display all tables
 
-Manage Tables
+3️⃣ Order Management
 
-Manage Orders
+Place orders using Table No and Item ID
 
-Generate Bills
+Display all orders
 
-Exit System
+4️⃣ Billing System
 
-Menu Item Sub-Menu options:
+Generate bills based on orders
 
-Create, Find, Update, Delete Menu Items
+Automatically calculate total amount
 
-View All Menu Items
+Display all generated bills
 
-Navigate back to Main Menu
+💾 File Handling (Data Persistence)
 
-Note: Some features are marked as "coming in next milestone" and are placeholders for future implementation.
+The system uses binary files to ensure that data is not lost when the program exits.
 
-Installation
+Entity	File Name
+Menu	menu.dat
+Tables	table.dat
+Orders	order.dat
+Bills	bill.dat
+🔹 How It Works
 
-Clone the repository:
+On program startup → data is loaded from files
 
-git clone https://github.com/Abdulwasaytahir/restaurant-management-system.git
+On Add / Update / Delete → files are updated immediately
+
+On restart → previous data is restored automatically
+
+🔁 Sorting Logic
+
+Algorithm Used: Bubble Sort
+
+Sorting Options:
+
+Menu Items by ID (Ascending / Descending)
+
+Menu Items by Name (Alphabetical)
+
+Sorting is applied before displaying records to improve readability.
+
+🎨 User Interface
+
+ANSI color codes for:
+
+Headings
+
+Success messages
+
+Errors and warnings
+
+Clean table-formatted output
+
+Screen clearing for better navigation
+
+⚠️ Data rows are intentionally kept color-free for readability and clean screenshots.
+
+🛠️ Technologies Used
+
+Language: C
+
+Concepts:
+
+Structures
+
+Arrays
+
+File Handling (fopen, fread, fwrite)
+
+Sorting Algorithms
+
+Modular Programming
+
+▶️ How to Run
+Compile
+gcc restaurant_management.c -o rms
+
+Run
+./rms
 
 
-Navigate to the project directory:
+⚠️ On Windows, run the executable directly after compilation.
 
-cd restaurant-management-system
+📂 Project Structure
+Restaurant-Management-System/
+│
+├── restaurant_management.c
+├── menu.dat
+├── table.dat
+├── order.dat
+├── bill.dat
+└── README.md
 
+📸 Screenshots (For Report / Demo)
 
-Compile the code (example using gcc):
+Main Menu with all modules
 
-gcc main.c -o RestaurantManagementSystem
+Menu list (Unsorted vs Sorted)
 
+Data persistence after restart
 
-Run the program:
+Bill generation output
 
-./RestaurantManagementSystem   # Linux/macOS
-RestaurantManagementSystem.exe # Windows
+🎓 Academic Context
 
-Usage
+This project was developed as part of the Final Milestone – Group Integration, File Handling & Sorting for Programming Fundamentals.
 
-Launch the program. You will see a welcome screen.
+🤝 Contribution
 
-Choose options from the Main Menu using numeric input.
+All group members contributed to the same unified codebase.
+Individual responsibilities are documented in the project report.
 
-Navigate to the Menu Item Sub-Menu to manage menu items.
+📜 License
 
-Select Back to Main Menu to return to the main interface.
+This project is for educational purposes only.
 
-Choose Exit System to close the program.
+⭐ Final Note
 
-All interactions occur through the console.
+This project demonstrates:
 
-Planned Features
+Real-world data modeling
 
-Full CRUD (Create, Read, Update, Delete) functionality for menu items
+Persistent storage
 
-Table management
+Sorting algorithms
 
-Order processing
+Clean and professional console UI
 
-Bill generation with calculations
-
-Persistent storage using files or database
-
-Contributing
-
-Contributions are welcome!
-
-Fork the repository
-
-Create your feature branch (git checkout -b feature/new-feature)
-
-Commit your changes (git commit -m 'Add new feature')
-
-Push to the branch (git push origin feature/new-feature)
-
-Open a Pull Request
-
-License
-
-This project is licensed under the MIT License. See the LICENSE
- file for details.
+Feel free to fork, improve, or use it as a learning reference.
